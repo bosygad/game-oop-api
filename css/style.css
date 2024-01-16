@@ -1,0 +1,110 @@
+
+body{
+
+      background-color: rgb(39 43 48);
+      font-family: 'Comfortaa', sans-serif;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Nerko One', cursive;
+    color: #fff;
+ }
+/* ******** header ********* */
+header img{
+    height: 40vh;
+    object-fit: cover;
+}
+/******************* nav ****************/
+nav .container{
+    background-color: #3a497b;
+    box-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+.nav-item .nav-link{
+    color: #fff;
+    width: fit-content;
+    font-size: 12.5px;
+}
+.nav-item .active{
+    color: #09c !important;
+   
+}
+/************ detail **********/
+p .text-bg-info{
+   font-size: 12px;
+   line-height: 12px;
+   font-weight: 700;
+}
+.detail a{
+    color: #fff !important;
+}
+.detail a:hover{
+    color: #1f2122;
+    background-color: rgb(231, 179, 9) !important;
+    transition: all .5s;
+}
+/************* card **************/
+.card{
+    background-color: #32383e;
+    color: #d8d1d1;
+    filter: grayscale(.8);
+}
+.card:hover{
+    filter: grayscale(0);
+    transition: all .8s;
+    transform: scale(1.05);
+}
+.card img{
+    border-radius: 20px;
+}
+
+.card-body,.card-footer{
+    font-size: 14px;
+    font-weight: 400;
+}
+/* loading */
+.loanding{
+  position: fixed;
+  inset: 0;
+  z-index: 33333;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+align-items: center;
+
+}
+.load{
+    width: 100px;
+    height: 100px;
+    /* background-color: #e00a0a; */
+    display: inline-block;
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    position: relative;
+    animation: rotation 1s linear infinite;
+  
+}
+.load::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+  border-radius: 50%;
+    border-left: 4px solid palevioletred;
+    border-bottom: 4px solid transparent ;
+    box-sizing: border-box;
+    animation: rotation .5s linear infinite reverse;
+
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
